@@ -7,18 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40EC67772B37567500B5ED7C /* Count_DownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67762B37567500B5ED7C /* Count_DownApp.swift */; };
-		40EC67792B37567500B5ED7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67782B37567500B5ED7C /* ContentView.swift */; };
+		40EC67772B37567500B5ED7C /* CountDownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67762B37567500B5ED7C /* CountDownApp.swift */; };
+		40EC67792B37567500B5ED7C /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67782B37567500B5ED7C /* CountDownView.swift */; };
 		40EC677B2B37567700B5ED7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EC677A2B37567700B5ED7C /* Assets.xcassets */; };
 		40EC677E2B37567700B5ED7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EC677D2B37567700B5ED7C /* Preview Assets.xcassets */; };
+		40EC67872B375C9A00B5ED7C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67862B375C9A00B5ED7C /* Constants.swift */; };
+		40EC678B2B375DA500B5ED7C /* EmptyCountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC678A2B375DA500B5ED7C /* EmptyCountDownView.swift */; };
+		40EC678D2B37608900B5ED7C /* AddCountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC678C2B37608900B5ED7C /* AddCountDownView.swift */; };
+		40EC67902B38700000B5ED7C /* AddCountDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC678F2B38700000B5ED7C /* AddCountDownViewModel.swift */; };
+		40EC67922B38A4CA00B5ED7C /* StateBindingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67912B38A4CA00B5ED7C /* StateBindingViewModel.swift */; };
+		40EC67942B38CD1000B5ED7C /* CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67932B38CD1000B5ED7C /* CountDown.swift */; };
+		40EC67972B3DE14300B5ED7C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 40EC67962B3DE14300B5ED7C /* Realm */; };
+		40EC67992B3DE14300B5ED7C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40EC67982B3DE14300B5ED7C /* RealmSwift */; };
+		40EC679C2B3E0C4400B5ED7C /* CountDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC679B2B3E0C4400B5ED7C /* CountDownViewModel.swift */; };
+		40EC679F2B3EFA9A00B5ED7C /* CountDownDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC679E2B3EFA9A00B5ED7C /* CountDownDetailsView.swift */; };
+		40EC67A12B3EFAAB00B5ED7C /* CountDownDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67A02B3EFAAB00B5ED7C /* CountDownDetailsViewModel.swift */; };
+		40EC67A32B3F2B8C00B5ED7C /* CountDownTickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67A22B3F2B8B00B5ED7C /* CountDownTickerView.swift */; };
+		40EC67A52B40974600B5ED7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67A42B40974500B5ED7C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		40EC67732B37567500B5ED7C /* Count Down.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count Down.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		40EC67762B37567500B5ED7C /* Count_DownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count_DownApp.swift; sourceTree = "<group>"; };
-		40EC67782B37567500B5ED7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		40EC67762B37567500B5ED7C /* CountDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownApp.swift; sourceTree = "<group>"; };
+		40EC67782B37567500B5ED7C /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		40EC677A2B37567700B5ED7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40EC677D2B37567700B5ED7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40EC67862B375C9A00B5ED7C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		40EC678A2B375DA500B5ED7C /* EmptyCountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCountDownView.swift; sourceTree = "<group>"; };
+		40EC678C2B37608900B5ED7C /* AddCountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountDownView.swift; sourceTree = "<group>"; };
+		40EC678F2B38700000B5ED7C /* AddCountDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountDownViewModel.swift; sourceTree = "<group>"; };
+		40EC67912B38A4CA00B5ED7C /* StateBindingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBindingViewModel.swift; sourceTree = "<group>"; };
+		40EC67932B38CD1000B5ED7C /* CountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDown.swift; sourceTree = "<group>"; };
+		40EC679B2B3E0C4400B5ED7C /* CountDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewModel.swift; sourceTree = "<group>"; };
+		40EC679E2B3EFA9A00B5ED7C /* CountDownDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownDetailsView.swift; sourceTree = "<group>"; };
+		40EC67A02B3EFAAB00B5ED7C /* CountDownDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownDetailsViewModel.swift; sourceTree = "<group>"; };
+		40EC67A22B3F2B8B00B5ED7C /* CountDownTickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTickerView.swift; sourceTree = "<group>"; };
+		40EC67A42B40974500B5ED7C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40EC67992B3DE14300B5ED7C /* RealmSwift in Frameworks */,
+				40EC67972B3DE14300B5ED7C /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +77,9 @@
 		40EC67752B37567500B5ED7C /* Count Down */ = {
 			isa = PBXGroup;
 			children = (
-				40EC67762B37567500B5ED7C /* Count_DownApp.swift */,
-				40EC67782B37567500B5ED7C /* ContentView.swift */,
+				40EC67852B375B6500B5ED7C /* Models */,
+				40EC67842B375B5E00B5ED7C /* Views */,
+				40EC67762B37567500B5ED7C /* CountDownApp.swift */,
 				40EC677A2B37567700B5ED7C /* Assets.xcassets */,
 				40EC677C2B37567700B5ED7C /* Preview Content */,
 			);
@@ -65,6 +92,56 @@
 				40EC677D2B37567700B5ED7C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40EC67842B375B5E00B5ED7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40EC679D2B3EFA7200B5ED7C /* CounDownDetailsView */,
+				40EC679A2B3E0C2B00B5ED7C /* CountDownView */,
+				40EC678E2B386FC900B5ED7C /* AddCountDownView */,
+				40EC678A2B375DA500B5ED7C /* EmptyCountDownView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40EC67852B375B6500B5ED7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40EC67862B375C9A00B5ED7C /* Constants.swift */,
+				40EC67912B38A4CA00B5ED7C /* StateBindingViewModel.swift */,
+				40EC67932B38CD1000B5ED7C /* CountDown.swift */,
+				40EC67A42B40974500B5ED7C /* Extensions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40EC678E2B386FC900B5ED7C /* AddCountDownView */ = {
+			isa = PBXGroup;
+			children = (
+				40EC678C2B37608900B5ED7C /* AddCountDownView.swift */,
+				40EC678F2B38700000B5ED7C /* AddCountDownViewModel.swift */,
+			);
+			path = AddCountDownView;
+			sourceTree = "<group>";
+		};
+		40EC679A2B3E0C2B00B5ED7C /* CountDownView */ = {
+			isa = PBXGroup;
+			children = (
+				40EC67782B37567500B5ED7C /* CountDownView.swift */,
+				40EC679B2B3E0C4400B5ED7C /* CountDownViewModel.swift */,
+			);
+			path = CountDownView;
+			sourceTree = "<group>";
+		};
+		40EC679D2B3EFA7200B5ED7C /* CounDownDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				40EC679E2B3EFA9A00B5ED7C /* CountDownDetailsView.swift */,
+				40EC67A02B3EFAAB00B5ED7C /* CountDownDetailsViewModel.swift */,
+				40EC67A22B3F2B8B00B5ED7C /* CountDownTickerView.swift */,
+			);
+			path = CounDownDetailsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +160,10 @@
 			dependencies = (
 			);
 			name = "Count Down";
+			packageProductDependencies = (
+				40EC67962B3DE14300B5ED7C /* Realm */,
+				40EC67982B3DE14300B5ED7C /* RealmSwift */,
+			);
 			productName = "Count Down";
 			productReference = 40EC67732B37567500B5ED7C /* Count Down.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 40EC676A2B37567500B5ED7C;
+			packageReferences = (
+				40EC67952B3DE14300B5ED7C /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 40EC67742B37567500B5ED7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +221,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40EC67792B37567500B5ED7C /* ContentView.swift in Sources */,
-				40EC67772B37567500B5ED7C /* Count_DownApp.swift in Sources */,
+				40EC67A12B3EFAAB00B5ED7C /* CountDownDetailsViewModel.swift in Sources */,
+				40EC67922B38A4CA00B5ED7C /* StateBindingViewModel.swift in Sources */,
+				40EC67A32B3F2B8C00B5ED7C /* CountDownTickerView.swift in Sources */,
+				40EC678D2B37608900B5ED7C /* AddCountDownView.swift in Sources */,
+				40EC679C2B3E0C4400B5ED7C /* CountDownViewModel.swift in Sources */,
+				40EC67792B37567500B5ED7C /* CountDownView.swift in Sources */,
+				40EC67942B38CD1000B5ED7C /* CountDown.swift in Sources */,
+				40EC679F2B3EFA9A00B5ED7C /* CountDownDetailsView.swift in Sources */,
+				40EC67A52B40974600B5ED7C /* Extensions.swift in Sources */,
+				40EC67902B38700000B5ED7C /* AddCountDownViewModel.swift in Sources */,
+				40EC67772B37567500B5ED7C /* CountDownApp.swift in Sources */,
+				40EC678B2B375DA500B5ED7C /* EmptyCountDownView.swift in Sources */,
+				40EC67872B375C9A00B5ED7C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +439,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40EC67952B3DE14300B5ED7C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40EC67962B3DE14300B5ED7C /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40EC67952B3DE14300B5ED7C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		40EC67982B3DE14300B5ED7C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40EC67952B3DE14300B5ED7C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 40EC676B2B37567500B5ED7C /* Project object */;
 }
