@@ -77,11 +77,7 @@ struct AddCountDownView: View {
                 }
                 
             }
-            .navigationBarTitle(viewModel.state.isEditingExisting ? "Edit Count Down" : "Add New Count Down")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(K.Colors.primary2, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .configureNavigationBar(title: viewModel.state.isEditingExisting ? "Edit Count Down" : "Add New Count Down")
         }
         
         

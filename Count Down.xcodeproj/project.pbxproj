@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401A9CE12B599AC50034D61F /* CountDownListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A9CE02B599AC50034D61F /* CountDownListItemView.swift */; };
 		40EC67772B37567500B5ED7C /* CountDownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67762B37567500B5ED7C /* CountDownApp.swift */; };
 		40EC67792B37567500B5ED7C /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67782B37567500B5ED7C /* CountDownView.swift */; };
 		40EC677B2B37567700B5ED7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EC677A2B37567700B5ED7C /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		401A9CE02B599AC50034D61F /* CountDownListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownListItemView.swift; sourceTree = "<group>"; };
 		40EC67732B37567500B5ED7C /* Count Down.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count Down.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EC67762B37567500B5ED7C /* CountDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownApp.swift; sourceTree = "<group>"; };
 		40EC67782B37567500B5ED7C /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				40EC67782B37567500B5ED7C /* CountDownView.swift */,
 				40EC679B2B3E0C4400B5ED7C /* CountDownViewModel.swift */,
+				401A9CE02B599AC50034D61F /* CountDownListItemView.swift */,
 			);
 			path = CountDownView;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				40EC67A32B3F2B8C00B5ED7C /* CountDownTickerView.swift in Sources */,
 				40EC678D2B37608900B5ED7C /* AddCountDownView.swift in Sources */,
 				40EC679C2B3E0C4400B5ED7C /* CountDownViewModel.swift in Sources */,
+				401A9CE12B599AC50034D61F /* CountDownListItemView.swift in Sources */,
 				40EC67792B37567500B5ED7C /* CountDownView.swift in Sources */,
 				40EC67942B38CD1000B5ED7C /* CountDown.swift in Sources */,
 				40EC679F2B3EFA9A00B5ED7C /* CountDownDetailsView.swift in Sources */,

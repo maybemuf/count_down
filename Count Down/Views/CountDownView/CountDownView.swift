@@ -17,34 +17,48 @@ struct CountDownView: View {
                 if viewModel.state.countDowns.isEmpty {
                     EmptyCountDownView()
                 } else {
-                        List {
-                            
-                            Section {
-                                Toggle("Show completed:", isOn: viewModel.binding(\.isShowingCompleted))
+                    List {
+                        
+                        Section {
+                            Toggle("Show completed:", isOn: viewModel.binding(\.isShowingCompleted))
+                        }
+                        
+                        let activeCountDowns = viewModel.state.filteredCountDownds.filter { !$0.isPassed }
+                        Section(header: Text(activeCountDowns.isEmpty ? "No active items" : "Active")) {
+                            ForEach(activeCountDowns) { countDown in
+                                CountDownListItemView(countDown: countDown)
+                                    .swipeActions {
+                                        Button("", systemImage: "trash", role: .destructive) {
+                                            viewModel.deleteCountDown(countDown)
+                                        }
+                                    }
                             }
-
-                            ForEach(viewModel.state.filteredCountDownds) { countDown in
-                                NavigationLink {
-                                    CountDownDetailsView(countDown: countDown)
-                                } label: {
-                                    Text(countDown.name)
+                        }
+                        
+                        
+                        if viewModel.state.isShowingCompleted {
+                            let passedCountDowns = viewModel.state.filteredCountDownds.filter { $0.isPassed }
+                            Section(header: Text(passedCountDowns.isEmpty ? "No passed items" : "Passed")) {
+                                ForEach(passedCountDowns) { countDown in
+                                    CountDownListItemView(countDown: countDown)
+                                        .swipeActions {
+                                            Button("", systemImage: "trash", role: .destructive) {
+                                                viewModel.deleteCountDown(countDown)
+                                            }
+                                        }
                                 }
                             }
-                            .onDelete(perform: preformDelete)
                         }
+                    }
                     
                 }
                 
             }
+            .configureNavigationBar(title: K.Strings.countDownTitle)
+            .onAppear(perform: viewModel.getCountDowns)
             .sheet(isPresented: $isSheetPresented) {
                 AddCountDownView()
             }
-            .onAppear(perform: viewModel.getCountDowns)
-            .navigationTitle(K.Strings.countDownTitle)
-            .toolbarBackground(K.Colors.primary2, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbar {
                 if !viewModel.state.countDowns.isEmpty {
                     ToolbarItem(placement: .topBarTrailing) {
@@ -56,12 +70,6 @@ struct CountDownView: View {
                     }
                 }
             }
-        }
-    }
-    
-    private func preformDelete(at index: IndexSet) {
-        if let index = index.first {
-            viewModel.deleteCountDown(viewModel.state.countDowns[index])
         }
     }
 }

@@ -24,7 +24,7 @@ struct CountDownDetailsView: View {
                     
                     VStack(alignment: .leading) {
                         HStack {
-                            Text("Untill")
+                            Text("Until")
                             Text(viewModel.state.countDown.name)
                                 .underline()
                             
@@ -49,11 +49,7 @@ struct CountDownDetailsView: View {
             }.onAppear {
                 viewModel.setupCountDown()
             }
-            .navigationTitle("CountDown Details")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(K.Colors.primary2, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .configureNavigationBar(title: "CountDown Details")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Edit") {

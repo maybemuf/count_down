@@ -6,6 +6,18 @@
 //
 
 import Foundation
+import SwiftUI
+
+extension View {
+    func configureNavigationBar(title: String) -> some View{
+        self
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(K.Colors.primary2, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
+    }
+}
 
 extension Timer {
     var isPaused: Bool {
