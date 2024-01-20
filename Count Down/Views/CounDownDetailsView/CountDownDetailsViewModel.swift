@@ -34,6 +34,7 @@ class CountDownDetailsViewModel: StateBindingViewModel<CountDownDetailsState> {
         } else {
             updateTimeDifference()
             timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                if self.isCompleted { timer.invalidate() }
                 self.updateTimeDifference()
             }
         }

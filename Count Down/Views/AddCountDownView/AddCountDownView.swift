@@ -66,6 +66,13 @@ struct AddCountDownView: View {
                     }
                 
                 }
+                
+                Section(header: Text("Notifications")){
+                    NotifyMenu(
+                        selectedAlertOption: viewModel.state.alertOption,
+                        onAlertOptionSelected: viewModel.updateAlertOption
+                    )
+                }
                
                 Section {
                     Button(viewModel.state.isEditingExisting ? "Save" : "Add") {

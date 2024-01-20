@@ -14,16 +14,19 @@ class CountDown: Object, ObjectKeyIdentifiable {
     @Persisted var descriptionText: String?
     @Persisted var dateScheduled: Date
     @Persisted var dateCreated: Date
+    @Persisted var alert: CountDownAlert?
+    
     var isPassed: Bool {
         dateScheduled < Date()
     }
     
-    convenience init(name: String, descriptionText: String? = nil, dateScheduled: Date, dateCreated: Date = Date()) {
+    convenience init(name: String, descriptionText: String? = nil, dateScheduled: Date, dateCreated: Date = Date(), option: AlertOption = .none) {
         self.init()
         self.name = name
         self.descriptionText = descriptionText
         self.dateScheduled = dateScheduled
         self.dateCreated = dateCreated
+        alert = CountDownAlert(option)
     }
     
     static func generate() -> CountDown {

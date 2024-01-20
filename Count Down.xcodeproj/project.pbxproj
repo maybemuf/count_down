@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		401A9CE12B599AC50034D61F /* CountDownListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A9CE02B599AC50034D61F /* CountDownListItemView.swift */; };
+		401A9CE32B59A68C0034D61F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 401A9CE22B59A68C0034D61F /* README.md */; };
+		401A9CE52B5AFB3E0034D61F /* NotifyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A9CE42B5AFB3E0034D61F /* NotifyMenu.swift */; };
+		401A9CE72B5B0BE60034D61F /* CountDownAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A9CE62B5B0BE60034D61F /* CountDownAlert.swift */; };
+		401A9CE92B5B21B50034D61F /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A9CE82B5B21B50034D61F /* LocalNotificationService.swift */; };
 		40EC67772B37567500B5ED7C /* CountDownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67762B37567500B5ED7C /* CountDownApp.swift */; };
 		40EC67792B37567500B5ED7C /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC67782B37567500B5ED7C /* CountDownView.swift */; };
 		40EC677B2B37567700B5ED7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EC677A2B37567700B5ED7C /* Assets.xcassets */; };
@@ -29,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		401A9CE02B599AC50034D61F /* CountDownListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownListItemView.swift; sourceTree = "<group>"; };
+		401A9CE22B59A68C0034D61F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		401A9CE42B5AFB3E0034D61F /* NotifyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyMenu.swift; sourceTree = "<group>"; };
+		401A9CE62B5B0BE60034D61F /* CountDownAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownAlert.swift; sourceTree = "<group>"; };
+		401A9CE82B5B21B50034D61F /* LocalNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
 		40EC67732B37567500B5ED7C /* Count Down.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count Down.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EC67762B37567500B5ED7C /* CountDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownApp.swift; sourceTree = "<group>"; };
 		40EC67782B37567500B5ED7C /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
@@ -63,6 +71,7 @@
 		40EC676A2B37567500B5ED7C = {
 			isa = PBXGroup;
 			children = (
+				401A9CE22B59A68C0034D61F /* README.md */,
 				40EC67752B37567500B5ED7C /* Count Down */,
 				40EC67742B37567500B5ED7C /* Products */,
 			);
@@ -114,6 +123,8 @@
 				40EC67912B38A4CA00B5ED7C /* StateBindingViewModel.swift */,
 				40EC67932B38CD1000B5ED7C /* CountDown.swift */,
 				40EC67A42B40974500B5ED7C /* Extensions.swift */,
+				401A9CE62B5B0BE60034D61F /* CountDownAlert.swift */,
+				401A9CE82B5B21B50034D61F /* LocalNotificationService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				40EC678C2B37608900B5ED7C /* AddCountDownView.swift */,
+				401A9CE42B5AFB3E0034D61F /* NotifyMenu.swift */,
 				40EC678F2B38700000B5ED7C /* AddCountDownViewModel.swift */,
 			);
 			path = AddCountDownView;
@@ -212,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				401A9CE32B59A68C0034D61F /* README.md in Resources */,
 				40EC677E2B37567700B5ED7C /* Preview Assets.xcassets in Resources */,
 				40EC677B2B37567700B5ED7C /* Assets.xcassets in Resources */,
 			);
@@ -229,9 +242,12 @@
 				40EC67A32B3F2B8C00B5ED7C /* CountDownTickerView.swift in Sources */,
 				40EC678D2B37608900B5ED7C /* AddCountDownView.swift in Sources */,
 				40EC679C2B3E0C4400B5ED7C /* CountDownViewModel.swift in Sources */,
+				401A9CE92B5B21B50034D61F /* LocalNotificationService.swift in Sources */,
 				401A9CE12B599AC50034D61F /* CountDownListItemView.swift in Sources */,
 				40EC67792B37567500B5ED7C /* CountDownView.swift in Sources */,
 				40EC67942B38CD1000B5ED7C /* CountDown.swift in Sources */,
+				401A9CE72B5B0BE60034D61F /* CountDownAlert.swift in Sources */,
+				401A9CE52B5AFB3E0034D61F /* NotifyMenu.swift in Sources */,
 				40EC679F2B3EFA9A00B5ED7C /* CountDownDetailsView.swift in Sources */,
 				40EC67A52B40974600B5ED7C /* Extensions.swift in Sources */,
 				40EC67902B38700000B5ED7C /* AddCountDownViewModel.swift in Sources */,

@@ -14,6 +14,7 @@ struct AddCountDownState: Equatable {
     var nameErrorText = ""
     var dateErrorText = ""
     var dateTo = Calendar.current.date(byAdding: .hour, value: 1, to: Date()) ?? Date()
+    var alertOption = AlertOption.none
     var editedCountDownId: ObjectId?
     var isEditingExisting = false
     
@@ -31,6 +32,7 @@ struct AddCountDownState: Equatable {
         name = countDown.name
         description = countDown.descriptionText ?? ""
         dateTo = countDown.dateScheduled
+        alertOption = countDown.alert?.alertOption ?? .none
         isEditingExisting = true
         editedCountDownId = countDown.id
         nameErrorText = ""
@@ -39,6 +41,7 @@ struct AddCountDownState: Equatable {
 }
 
 final class AddCountDownViewModel: StateBindingViewModel<AddCountDownState> {
+    let localNotificationService = LocalNotificationService()
     let realm = try? Realm()
     
     init() {
@@ -63,20 +66,28 @@ final class AddCountDownViewModel: StateBindingViewModel<AddCountDownState> {
         let countDown = CountDown(
             name: state.name,
             descriptionText: state.description,
-            dateScheduled: state.dateTo
+            dateScheduled: state.dateTo,
+            option: state.alertOption
         )
         
         do {
             try realm?.write {
                 if state.isEditingExisting {
-                    let countDownToEdit = realm?.object(ofType: CountDown.self, forPrimaryKey: state.editedCountDownId)
-                    if let countDownToEdit {
+                    if let countDownToEdit = realm?.object(ofType: CountDown.self, forPrimaryKey: state.editedCountDownId) {
                         countDownToEdit.name = state.name
                         countDownToEdit.descriptionText = state.description
                         countDownToEdit.dateScheduled = state.dateTo
+                        countDownToEdit.alert?.alertOption = state.alertOption
+                        
+                        if state.alertOption != .none {
+                            localNotificationService.scheduleAlert(for: countDown, updating: true)
+                        }
                     }
                 } else {
                     realm?.add(countDown)
+                    if state.alertOption != AlertOption.none {
+                        localNotificationService.scheduleAlert(for: countDown)
+                    }
                 }
                 
                 onAdded()
@@ -84,6 +95,10 @@ final class AddCountDownViewModel: StateBindingViewModel<AddCountDownState> {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func updateAlertOption(with option: AlertOption) {
+        update(\.alertOption, to: option)
     }
     
     private func validateName() -> Bool {
