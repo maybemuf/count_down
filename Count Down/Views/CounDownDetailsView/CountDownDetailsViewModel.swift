@@ -23,19 +23,17 @@ extension CountDownDetailsState {
 class CountDownDetailsViewModel: StateBindingViewModel<CountDownDetailsState> {
     var timer: Timer?
     
-    var isCompleted: Bool {
-        state.countDown.dateScheduled <= Date()
-    }
-    
     func setupCountDown() {
-        print("setup countDown")
-        if isCompleted {
+        if state.countDown.isPassed {
             self.update(\.timeDifference, to: DateComponents())
         } else {
             updateTimeDifference()
             timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-                if self.isCompleted { timer.invalidate() }
                 self.updateTimeDifference()
+                if self.state.countDown.isPassed {
+                    timer.invalidate()
+                    self.update(\.timeDifference, to: DateComponents())
+                }
             }
         }
     }
@@ -54,7 +52,7 @@ class CountDownDetailsViewModel: StateBindingViewModel<CountDownDetailsState> {
     
     override func onStateChange(_ keyPath: PartialKeyPath<CountDownDetailsState>) {
         if keyPath == \.isEditing {
-            if !(state[keyPath: keyPath] as! Bool) {
+            if !(state[keyPath: keyPath] as! Bool) && !state.countDown.isPassed {
                 updateTimeDifference()
                 timer?.resume()
             }
